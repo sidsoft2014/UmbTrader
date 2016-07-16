@@ -1,0 +1,16 @@
+﻿.navbar {
+    &-header {
+        width: 100%;
+        height: 3em;
+        display: inline-block;
+    }
+
+    &-list {
+        text-decoration: none;
+        list-style: none;
+
+        &-left {
+            float: left;
+        }
+    }
+}

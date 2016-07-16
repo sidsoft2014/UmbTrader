@@ -1,9 +1,8 @@
-@import "variables";
-@import "mixins";
-
-@import "font-awesome/font-awesome";
+@import "_variables.scss";
+@import "_mixins.scss";
 
 @import "elements/general";
 @import "elements/action-panel";
 @import "elements/chart";
 @import "elements/ticker";
+@import "elements/navbar";

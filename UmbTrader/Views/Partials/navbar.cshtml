@@ -1,0 +1,33 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    var pages = Umbraco.TypedContentAtRoot();
+}
+
+<div class="navbar navbar-header">
+    @if (pages.Any())
+    {
+        <ul class="navbar-list navbar-list-left">
+            @foreach (var page in pages)
+            {
+                if (page.Children.Any())
+                {
+                    <li class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            @page.Name<span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            @foreach (var child in page.Children)
+                            {
+                                <li><a href="@child.UrlName">@child.Name</a></li>
+                            }
+                        </ul>
+                    </li>
+                }
+                else
+                {
+                    <li><a href="@page.UrlName">@page.Name</a></li>
+                }
+            }
+        </ul>
+    }
+</div>

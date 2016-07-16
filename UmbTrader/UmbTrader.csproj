@@ -320,8 +320,37 @@
     <Content Include="Config\BaseRestExtensions.config" />
     <Content Include="Config\applications.config" />
     <Content Include="Config\404handlers.config" />
-    <Content Include="sitefiles\src\styles\**\*.*" />
+    <Content Include="sitefiles\src\styles\sass\elements\_action-panel.scss" />
+    <Content Include="sitefiles\src\styles\sass\elements\_chart.scss" />
+    <Content Include="sitefiles\src\styles\sass\elements\_general.scss" />
+    <Content Include="sitefiles\src\styles\sass\elements\_navbar.scss" />
+    <Content Include="sitefiles\src\styles\sass\elements\_ticker.scss" />
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\font-awesome.css">
+      <DependentUpon>font-awesome.scss</DependentUpon>
+    </Content>
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\font-awesome.min.css">
+      <DependentUpon>font-awesome.css</DependentUpon>
+    </Content>
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\font-awesome.scss" />
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\_animated.scss" />
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\_bordered-pulled.scss" />
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\_core.scss" />
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\_fixed-width.scss" />
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\_icons.scss" />
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\_larger.scss" />
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\_list.scss" />
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\_mixins.scss" />
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\_path.scss" />
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\_rotated-flipped.scss" />
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\_screen-reader.scss" />
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\_stacked.scss" />
+    <Content Include="sitefiles\src\styles\vendor\font-awesome\_variables.scss" />
+    <Content Include="sitefiles\src\styles\sass\main.scss" />
+    <Content Include="sitefiles\src\styles\sass\_mixins.scss" />
+    <Content Include="sitefiles\src\styles\sass\_variables.scss" />
     <Content Include="Views\**\*.*" />
+    <Content Include="Views\UserPage.cshtml" />
+    <Content Include="Views\Partials\navbar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -361,7 +390,6 @@
     <Content Include="sitefiles\src\scripts\vendor\angular.min.js" />
     <Content Include="sitefiles\src\scripts\vendor\bootstrap.min.js" />
     <Content Include="sitefiles\src\scripts\vendor\jquery-2.1.4.min.js" />
-    <Content Include="sitefiles\src\styles\vendor\font-awesome.min.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -373,6 +401,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="sitefiles\src\fonts\" />
+    <Folder Include="sitefiles\src\styles\vendor\bootstrap\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
