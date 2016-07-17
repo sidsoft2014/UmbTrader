@@ -10,7 +10,7 @@
 
 var paths = {
     sass: {
-        src: './sitefiles/src/styles/sass/main.scss',
+        src: './sitefiles/src/styles/sass/**/*.scss',
         dest: './sitefiles/dist/styles'
     },
     js: {
@@ -36,11 +36,16 @@ var paths = {
     }
 }
 
+gulp.task('clean', function () {
+    return del(['./sitefiles/dist']);
+});
+
 gulp.task('sass', function () {
     return gulp.src(paths.sass.src)
         .pipe(sass())
         .pipe(nano())
-        .pipe(gulp.dest(paths.sass.dest));
+        .pipe(gulp.dest(paths.sass.dest))
+        .pipe(browserSync.stream());
 });
 gulp.task('sass:vendor', function () {
     gulp.src(paths.vendor.styles.sass.src)
@@ -52,11 +57,8 @@ gulp.task('sass:vendor', function () {
 gulp.task('uglify', function () {
     return gulp.src(paths.js.src)
         .pipe(uglify())
-        .pipe(gulp.dest(paths.js.dest));
-});
-
-gulp.task('clean', function () {
-    return del(['./sitefiles/dist']);
+        .pipe(gulp.dest(paths.js.dest))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('move:vendor', function () {
@@ -74,9 +76,16 @@ gulp.task('build', function (callback) {
     runSequence('clean', ['sass', 'sass:vendor', 'uglify'], 'move:vendor', callback);
 });
 
-gulp.task('watch', ['build'], function () {
+gulp.task('serve', ['build'], function () {
+
+    browserSync.init({
+        proxy: "http://localhost"
+    });
+
     gulp.watch(paths.sass.src, ['sass']);
     gulp.watch(paths.js.src, ['uglify']);
+    gulp.watch("./Views/**/*.cshtml").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['watch']);
+
+gulp.task('default', ['build']);

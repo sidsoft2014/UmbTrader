@@ -320,11 +320,19 @@
     <Content Include="Config\BaseRestExtensions.config" />
     <Content Include="Config\applications.config" />
     <Content Include="Config\404handlers.config" />
+    <Content Include="sitefiles\src\scripts\ng\modules\ngMain.js" />
     <Content Include="sitefiles\src\styles\sass\elements\_action-panel.scss" />
     <Content Include="sitefiles\src\styles\sass\elements\_chart.scss" />
     <Content Include="sitefiles\src\styles\sass\elements\_general.scss" />
     <Content Include="sitefiles\src\styles\sass\elements\_navbar.scss" />
     <Content Include="sitefiles\src\styles\sass\elements\_ticker.scss" />
+    <Content Include="sitefiles\src\styles\sass\main.css">
+      <DependentUpon>main.scss</DependentUpon>
+    </Content>
+    <Content Include="sitefiles\src\styles\sass\main.min.css">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
+    <Content Include="sitefiles\src\styles\vendor\bootstrap\bootstrap.css" />
     <Content Include="sitefiles\src\styles\vendor\font-awesome\font-awesome.css">
       <DependentUpon>font-awesome.scss</DependentUpon>
     </Content>
@@ -401,7 +409,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="sitefiles\src\fonts\" />
-    <Folder Include="sitefiles\src\styles\vendor\bootstrap\" />
+    <Folder Include="sitefiles\src\scripts\ng\controllers\" />
+    <Folder Include="sitefiles\src\scripts\ng\directives\" />
+    <Folder Include="sitefiles\src\scripts\ng\services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
