@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+
+    </title>
+    <script src="~/sitefiles/dist/vendor/scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/sitefiles/dist/vendor/scripts/bootstrap.min.js"></script>
+    <link href="~/sitefiles/dist/vendor/styles/font-awesome/font-awesome.css" rel="stylesheet" />
+    <link href="~/sitefiles/dist/vendor/styles/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="~/sitefiles/dist/styles/main.css" rel="stylesheet" />
+</head>
+<body class="js-page page fullscreen">
+    <div class="js-page-body page-body">
+        @RenderBody()
+    </div>
+    <div class="js-page-foot page-foot">
+        <p>&copy; SidSoft&trade; @DateTime.Now.Year</p>
+    </div>
+</body>
+</html>

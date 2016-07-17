@@ -356,9 +356,32 @@
     <Content Include="sitefiles\src\styles\sass\main.scss" />
     <Content Include="sitefiles\src\styles\sass\_mixins.scss" />
     <Content Include="sitefiles\src\styles\sass\_variables.scss" />
-    <Content Include="Views\**\*.*" />
+    <Content Include="sitefiles\src\styles\vendor\owl-carousel\AjaxLoader.gif" />
+    <Content Include="sitefiles\src\styles\vendor\owl-carousel\grabbing.png" />
+    <Content Include="sitefiles\src\styles\vendor\owl-carousel\owl.carousel.css" />
+    <Content Include="sitefiles\src\styles\vendor\owl-carousel\owl.theme.css" />
+    <Content Include="sitefiles\src\styles\vendor\owl-carousel\owl.transitions.css" />
+    <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\InnerMaster.cshtml" />
+    <Content Include="Views\LandingPage.cshtml" />
+    <Content Include="Views\Login.cshtml" />
+    <Content Include="Views\MarketPage.cshtml" />
+    <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
+    <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Base.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Embed.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Macro.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Media.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
+    <Content Include="Views\Partials\navbar.cshtml" />
+    <Content Include="Views\UserPage.cshtml" />
+    <Content Include="Views\Web.config" />
     <Content Include="Views\UserPage.cshtml" />
     <Content Include="Views\Partials\navbar.cshtml" />
+    <Content Include="Views\Login.cshtml" />
+    <Content Include="Views\InnerMaster.cshtml" />
+    <Content Include="Views\OuterMaster.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

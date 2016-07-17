@@ -20,6 +20,15 @@ html {
         text-align: center;
     }
 }
+.centerd {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 10px;
+  @media only screen and(min-width: 768px){
+    padding: 0;
+  }
+}
 .color-bar {
     height: 2em;
     width: 100%;
@@ -39,12 +48,52 @@ html {
         background-color: $color-secondary-2-1;
         margin: 0 !important;
     }
-    .jumbo {
-        &-header {
-            color: $color-secondary-2-3;
+}
+.jumbo {
+    &-header {
+        color: $color-secondary-2-3 !important;
+    }
+    &-sub {
+        color: $color-secondary-2-4;
+    }
+}
+.section {
+    &-lrg {
+        @media only screen and (min-width: 768px) {
+            margin: 3em 10em;
         }
-        &-sub {
-            color: $color-secondary-2-4;
+    }
+}
+.header {
+    &-page {
+        color: $color-secondary-2-3 !important;
+        font-size: 2em;
+        margin-left: 1em;
+    }
+    &-sub {
+        color: $color-secondary-2-0;
+        line-height: 1.5em;
+        font-size: 1.6em;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+}
+.btn {
+    &-panel {
+        display: block;
+        height: 10em;
+        width: 100%;
+        text-align: center;
+        vertical-align: middle;
+        border: 2px solid $rgba-secondary-2-0;
+        background-color: $rgba-secondary-2-1;
+        p {
+            line-height: 1.5em;
+            font-size: 1.5em;
+            position: relative;
+            top: 33%;
+            font-weight: 800;
+            color: $rgba-secondary-2-0;
         }
     }
 }

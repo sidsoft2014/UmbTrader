@@ -1,95 +1,35 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-    Layout = null;
+    Layout = "OuterMaster.cshtml";
 }
 
-<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>
-
-    </title>
-    <script src="~/sitefiles/dist/vendor/scripts/jquery-2.1.4.min.js"></script>
-    <script src="~/sitefiles/dist/vendor/scripts/bootstrap.min.js"></script>
-    <script src="~/sitefiles/dist/scripts/main.js"></script>
-    <link href="~/sitefiles/dist/vendor/styles/font-awesome/font-awesome.min.css" rel="stylesheet" />
-    <link href="~/sitefiles/dist/vendor/styles/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="~/sitefiles/dist/styles/main.css" rel="stylesheet" />
-</head>
-<body class="js-page page fullscreen">
-    <div class="js-page-body page-body">
-        <div class="jumbotron no-margins">
-            <h1 class="jumbo-header">Umbraco Trader</h1>
-            <h4 class="jumbo-sub">This is the umbraco trading platform.</h4>
-        </div>
-        <span class="color-bar">&nbsp;</span>
-        <div>
-            <h2>Trade on over 100 active markets.</h2>
-            <div class="js-owl owl-carousel owl-theme">
-            </div>
-        </div>
+<div class="jumbotron no-margins">
+    <h1 class="jumbo-header">Umbraco Trader</h1>
+    <h4 class="jumbo-sub">This is the umbraco trading platform.</h4>
+</div>
+<span class="color-bar">&nbsp;</span>
+<div class="section-lrg">
+    <h2>Trade on over 100 active markets.</h2>
+    <div class="js-owl owl-carousel owl-theme">
     </div>
-    <div class="js-page-foot page-foot">
-        <p>&copy; SidSoft&trade; @DateTime.Now.Year</p>
+</div>
+<span class="color-bar">&nbsp;</span>
+<div class="section-lrg row">
+    <div class="col-sm-6">
+        <a class="btn btn-panel" href="/login/?mode=login">
+            <p>Login</p>
+        </a>
     </div>
-    <script src="~/sitefiles/dist/vendor/scripts/owl.carousel.min.js"></script>
-    <link href="~/sitefiles/dist/vendor/styles/owl-carousel/owl.transitions.css" rel="stylesheet" />
-    <link href="~/sitefiles/dist/vendor/styles/owl-carousel/owl.theme.css" rel="stylesheet" />
-    <link href="~/sitefiles/dist/vendor/styles/owl-carousel/owl.carousel.css" rel="stylesheet" />
-    <script>
-        $(document).ready(function () {
+    <div class="col-sm-6">
+        <a class="btn btn-panel" href="/login/?mode=register">
+            <p>Register</p>
+        </a>
+    </div>
+</div>
 
-            $(".js-owl").owlCarousel({
-                //Basic Speeds
-                slideSpeed: 200,
-                paginationSpeed: 400,
-                rewindSpeed: 1000,
-
-                //Autoplay
-                autoPlay: true,
-                stopOnHover: true,
-
-                // Navigation
-                navigation: true,
-                navigationText: ["&laquo;", "&raquo;"],
-                rewindNav: true,
-                scrollPerPage: false,
-
-                //Pagination
-                pagination: true,
-                paginationNumbers: false,
-
-                //JSON
-                jsonPath: 'https://poloniex.com/public?command=returnTicker',
-                jsonSuccess: populateOwl
-            });
-
-            function populateOwl(data) {
-                var content = "";
-                var keys = Object.keys(data);
-
-                for (var i in keys) {
-
-                    var key = keys[i];
-                    var item = data[key];
-
-                    var last = item.last;
-                    var change = item.percentChange;
-                    var col = parseFloat(change) > 0 ? 'up' : 'down';
-
-                    var line = "<div class='ticker-item-owl'>"
-                        + "<h4 class='ticker-item-name'>" + key + "</h4>"
-                        + "<h5 class='ticker-item-price'>" + last + "</h5>"
-                        + "<h5 class='ticker-item-price-" + col + "'>" + change + "</h5>"
-                        + "</div>"
-
-                    content += line;
-                }
-                $(".js-owl").html(content);
-            }
-
-        });
-    </script>
-</body>
-</html>
+<script src="~/sitefiles/dist/scripts/main.js"></script>
+<script src="~/sitefiles/dist/vendor/scripts/owl.carousel.min.js"></script>
+<link href="~/sitefiles/dist/vendor/styles/owl-carousel/owl.transitions.css" rel="stylesheet" />
+<link href="~/sitefiles/dist/vendor/styles/owl-carousel/owl.theme.css" rel="stylesheet" />
+<link href="~/sitefiles/dist/vendor/styles/owl-carousel/owl.carousel.css" rel="stylesheet" />

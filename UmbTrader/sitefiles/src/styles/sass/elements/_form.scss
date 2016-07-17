@@ -1,0 +1,25 @@
+.form {
+    border: 2px solid $color-secondary-1-4;
+    border-radius: 10px;
+    max-width: 500px;
+    padding: 10px 3px;
+    &-login {}
+    &-input {
+        width: 100%;
+        display: inline-block;
+        input,
+        label {
+            display: inline-block;
+            height: 4em;
+        }
+        label {
+            width: 5em;
+            text-align: right;
+            color: $color-secondary-2-4;
+        }
+        input {
+          border-radius: 10px;
+        }
+        &-login {}
+    }
+}

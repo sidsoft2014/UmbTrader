@@ -32,6 +32,10 @@ var paths = {
                 src: './sitefiles/src/styles/vendor/**/*.sass',
                 dest: './sitefiles/src/styles/vendor/css'
             }
+        },
+        fonts: {
+            src: "./sitefiles/src/fonts/**/*.*",
+            dest: "./sitefiles/dist/vendor/styles/fonts"
         }
     }
 }
@@ -69,6 +73,8 @@ gulp.task('move:vendor', function () {
         .pipe(gulp.dest(paths.vendor.styles.css.dest));
     gulp.src(paths.vendor.styles.css.srcMin)
         .pipe(gulp.dest(paths.vendor.styles.css.dest));
+    gulp.src(paths.vendor.fonts.src)
+        .pipe(gulp.dest(paths.vendor.fonts.dest));
     return;
 });
 
